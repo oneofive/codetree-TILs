@@ -10,12 +10,12 @@ public class Main {
         System.out.print(findMin(a, b, c));
     }
 
-    public static int findMin(int a, int b, int c) {
+    public static int findMin(int a, int b, int c) { // 38 4 -40
         int min = a;
 
         if (b < min) {
             min = b;
-        } else if (c < min) {
+        } if (c < min) {
             min = c;
         } else {
             return min;
