@@ -38,7 +38,7 @@ public class Main {
         return true;
     }
 
-    public static boolean isEvenSumOfDigit(int n) {
+    public static boolean isSumOfDigitEven(int n) {
         int sum = 0;
 
         while (n > 0) {
