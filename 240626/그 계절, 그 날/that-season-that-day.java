@@ -29,9 +29,9 @@ public class Main {
     }
 
     public static boolean isValid(int Y, int M, int D) {
-        if (Y < 1 || Y > 3000 || M < 1 || M > 12 || D < 1 || D > 31) {
-            return false;
-        }
+        // if (Y < 1 || Y > 3000 || M < 1 || M > 12 || D < 1 || D > 31) {
+        //     return false;
+        // }
 
         int[] daysOfMonth = {31, 30, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
