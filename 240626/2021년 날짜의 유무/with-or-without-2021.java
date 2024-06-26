@@ -14,7 +14,7 @@ public class Main {
             return "No";
         }
 
-        if (M == 1 && D >= 1 && D <= 28) {
+        if (M == 2 && D >= 1 && D <= 28) {
             return "Yes";
         }
 
