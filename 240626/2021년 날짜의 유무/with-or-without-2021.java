@@ -10,6 +10,10 @@ public class Main {
     }
 
     public static String isValidDate(int M, int D) {
+        if (M > 12) {
+            return "No";
+        }
+
         if (M == 1 && D >= 1 && D <= 28) {
             return "Yes";
         }
