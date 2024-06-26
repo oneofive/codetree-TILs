@@ -10,26 +10,14 @@ public class Main {
     }
 
     public static String isValidDate(int M, int D) {
-        if (M > 12) {
+        if (M < 1 || M > 12) {
             return "No";
         }
 
-        if (M == 2) {
-            if (D >= 1 && D <= 28) {
-                return "Yes";
-            } else {
-                return "No";
-            }
-        }
+        int[] daysOfMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-        if (M == 1 || M == 3 || M == 5 || M == 7 || M == 8 || M == 10 || M == 12) {
-            if (D >= 1 && D <= 31) {
-                return "Yes";
-            }
-        } else {
-            if(D >= 1 && D <= 30) {
-                return "Yes";
-            }
+        if (D >= 1 && D <= daysOfMonth[M - 1]) {
+            return "Yes";
         }
 
         return "No";
