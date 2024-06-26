@@ -13,19 +13,8 @@ public class Main {
     }
 
     public static boolean isLeap(int Y) {
-        if (Y % 4 == 0) {
-            if (Y % 100 == 0) {
-                if (Y % 400 == 0) {
-                    return true;
-                }
-
-                return false;
-            }
-
-            return true;
-        }
-
-        return false;
+        // 4의 배수 && (100의 배수 && 400 배수)
+        return (Y % 4 == 100) || (Y % 4 == 100 && Y % 400 == 0);
     }
 
     public static boolean isValid(int Y, int M, int D) {
