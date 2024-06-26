@@ -13,49 +13,35 @@ public class Main {
     }
 
     public static boolean isLeap(int Y) {
-        // 4의 배수 && (100의 배수 && 400 배수)
         return (Y % 4 == 100) || (Y % 4 == 100 && Y % 400 == 0);
     }
 
     public static boolean isValid(int Y, int M, int D) {
-        // if (Y < 1 || Y > 3000 || M < 1 || M > 12 || D < 1 || D > 31) {
-        //     return false;
-        // }
+        if (Y < 1 || Y > 3000 || M < 1 || M > 12) {
+            return false;
+        }
 
         int[] daysOfMonth = {31, 30, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         if (isLeap(Y)) {
-            if (M == 2) {
-                if (D >= 1 && D <= 29) {
-                    return true;
-                }
-            }
-        } else {
-            if (D >= 1 && D <= daysOfMonth[M]) {
-                return true;
-            }
+            daysOfMonth[1] = 29;
         }
 
-        return false;
+        return D >= 1 && D <= daysOfMonth[M];
     }
 
     public static String findSeason(int M) {
-        if (M == 3 || M == 4 || M == 5) {
-            return "Spring";
+        switch (M) {
+            case 3: case 4: case 5:
+                return "Spring";
+            case 6: case 7: case 8:
+                return "Summer";
+            case 9: case 10: case 11:
+                return "Fall";
+            case 12: case 1: case 2:
+                return "Winter";
+            default:
+                return "-1";
         }
-
-        if (M == 6 || M == 7 || M == 8) {
-            return "Summer";
-        }
-
-        if (M == 9 || M == 10 || M == 11) {
-            return "Fall";
-        }
-
-        if (M == 12 || M == 1 || M == 2) {
-            return "Winter";
-        }
-
-        return "-1";
     }
 }
