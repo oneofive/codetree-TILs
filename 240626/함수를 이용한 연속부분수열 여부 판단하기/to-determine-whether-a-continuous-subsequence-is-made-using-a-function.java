@@ -25,7 +25,6 @@ public class Main {
     }
 
     public static boolean isContatin(int[] a, int[] b, int numOfA, int numOfB) {
-        // a1씩 증가시키며 b0랑 비교 -> 같으면 a b모두 1씩 증가시킴(b 배결 끝까지 반복) -> 모두 같으면 return true;
         int n = 0;
         int m = 0;
 
