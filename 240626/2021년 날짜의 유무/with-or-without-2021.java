@@ -16,6 +16,8 @@ public class Main {
 
         if (M == 2 && D >= 1 && D <= 28) {
             return "Yes";
+        } else {
+            return "No";
         }
 
         if (M == 1 || M == 3 || M == 5 || M == 7 || M == 8 || M == 10 || M == 12) {
