@@ -13,11 +13,11 @@ public class Main {
     }
 
     public static boolean isLeap(int Y) {
-        return (Y % 4 == 100) || (Y % 4 == 100 && Y % 400 == 0);
+        return (Y % 4 == 0 && Y % 100 != 0) || (Y % 4 == 0 && Y % 400 == 0);
     }
 
     public static boolean isValid(int Y, int M, int D) {
-        if (Y < 1 || Y > 3000 || M < 1 || M > 12) {
+        if (Y < 1 || Y > 3000 || M < 1 || M > 12 || D < 1 || D > 31) {
             return false;
         }
 
@@ -27,7 +27,7 @@ public class Main {
             daysOfMonth[1] = 29;
         }
 
-        return D >= 1 && D <= daysOfMonth[M];
+        return D >= 1 && D <= daysOfMonth[M - 1];
     }
 
     public static String findSeason(int M) {
