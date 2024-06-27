@@ -9,6 +9,8 @@ public class Main {
 
         if (isValid(Y, M, D)) {
             System.out.print(findSeason(M));
+        } else {
+            System.out.print("-1");
         }
     }
 
