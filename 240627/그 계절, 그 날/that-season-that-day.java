@@ -21,7 +21,7 @@ public class Main {
             return false;
         }
 
-        int[] daysOfMonth = {31, 30, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int[] daysOfMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
         if (isLeap(Y)) {
             daysOfMonth[1] = 29;
