@@ -13,7 +13,18 @@ public class Main {
     }
 
     public static boolean isLeap(int Y) {
-        return (Y % 4 == 0 && Y % 100 != 0) || (Y % 4 == 0 && Y % 400 == 0);
+        if (Y % 4 == 0) {
+            if (Y % 100 == 0) {
+                if (Y % 400 == 0) {
+                    return true;
+                }
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
     }
 
     public static boolean isValid(int Y, int M, int D) {
