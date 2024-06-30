@@ -18,6 +18,10 @@ public class Main {
             if (input.charAt(i) == object.charAt(start)) {
                 start++;
                 index = i;
+
+                if (start == object.length()) {
+                    break;
+                }
             } else {
                 start = 0;
             }
