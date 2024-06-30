@@ -14,20 +14,14 @@ public class Main {
     }
 
     public static int[] cal(int a, int b) {
-        int big = a;
-        int small = b;
-
-        if (a < b) {
-            small = a;
-            big = b;
+        if (a > b) {
+            a += 25;
+            b *= 2;
         } else {
-            small = b;
-            big = a;
+            a *= 2;
+            b += 25;
         }
-
-        int[] result = new int[2];
-        result[0] = small * 2;
-        result[1] = big + 25;
+        int[] result = {a, b};
 
         return result;
     }
