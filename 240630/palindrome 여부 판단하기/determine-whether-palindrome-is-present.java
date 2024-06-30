@@ -17,14 +17,15 @@ public class Main {
         int last = str.length() - 1;
 
         while (first < last) {
-            if (str.charAt(first) == str.charAt(last)) {
-                first++;
-                last--;
+            if (str.charAt(first) != str.charAt(last)) {
+
+                return false;
             }
 
-            return true;
+            first++;
+            last--;
         }
 
-        return false;
+        return true;
     }
 }
