@@ -19,7 +19,7 @@ public class Main {
                 start++;
                 index = i;
 
-                if (start == object.length() + 1) {
+                if (start == object.length() - 1) {
                     break;
                 }
             } else {
