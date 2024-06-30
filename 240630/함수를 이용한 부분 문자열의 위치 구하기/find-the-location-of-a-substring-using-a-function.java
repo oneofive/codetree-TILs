@@ -7,7 +7,6 @@ public class Main {
         String object = scanner.nextLine();
 
         System.out.print(cal(input, object));
-
     }
 
     public static int cal(String input, String object) {
@@ -19,7 +18,7 @@ public class Main {
                 start++;
                 index = i;
 
-                if (start == object.length() - 1) {
+                if (start == object.length()) {
                     break;
                 }
             } else {
